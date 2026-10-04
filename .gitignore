@@ -1,0 +1,8 @@
+# Arquivos do sistema e do editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+
+# Pacotes gerados para subir na hospedagem
+*.zip

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lympha — seu controle do linfedema e do lipedema, mais leve</title>
+  <meta name="description" content="Lympha é o app para quem convive com linfedema ou lipedema: medidas, peso, sintomas, sessões, malhas, medicamentos e consultas num lugar só, com relatórios para a sua equipe.">
+  <meta name="theme-color" content="#5b6bd6">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:title" content="Lympha — seu controle, mais leve">
+  <meta property="og:description" content="O app para acompanhar o linfedema e o lipedema: medidas, sintomas, tratamento e relatórios para a sua equipe.">
+  <meta property="og:image" content="https://lympha.com.br/assets/img/logo.png">
+  <meta property="og:url" content="https://lympha.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+  <!-- Os ícones, desenhados uma vez e usados com <use>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-regua" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8h18v8H3zM7 8v3M11 8v4M15 8v3M19 8v4"/></symbol>
+      <symbol id="i-balanca" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM9 9a3 3 0 0 1 6 0M12 9l1.5-2"/></symbol>
+      <symbol id="i-coracao" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+      <symbol id="i-alerta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3 2 20h20L12 3zM12 10v4M12 17h.01"/></symbol>
+      <symbol id="i-maos" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 15c2-1 4-1 6 0s4 1 6 0 4-1 4-1M4 10c2-1 4-1 6 0s4 1 6 0 4-1 4-1M4 20c2-1 4-1 6 0s4 1 6 0 4-1 4-1"/></symbol>
+      <symbol id="i-meia" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 3h6v9l3 4a3 3 0 0 1-2.4 5H11a4 4 0 0 1-4-4v-1l2-4z"/></symbol>
+      <symbol id="i-remedio" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 4h10v3H7zM6 7h12v13H6zM12 11v6M9 14h6"/></symbol>
+      <symbol id="i-calendario" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></symbol>
+      <symbol id="i-grafico" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M6 15l4-4 3 3 5-6"/></symbol>
+      <symbol id="i-email" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+      <symbol id="i-sino" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></symbol>
+      <symbol id="i-prato" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></symbol>
+      <symbol id="i-pessoa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="i-equipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6M18 14a6 6 0 0 1 3 6"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/></symbol>
+      <symbol id="i-visto" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4 10-10"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v5M12 8h.01"/></symbol>
+      <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" d="M7 9h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1v2.5a1.5 1.5 0 0 1-3 0V18h-2v2.5a1.5 1.5 0 0 1-3 0V18H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1zm-3 1.5a1.5 1.5 0 0 1 3 0v4a1.5 1.5 0 0 1-3 0zm13 0a1.5 1.5 0 0 1 3 0v4a1.5 1.5 0 0 1-3 0zM7.6 8a4.6 4.6 0 0 1 2.3-3.4l-.8-1.3a.4.4 0 0 1 .7-.4l.8 1.4a5 5 0 0 1 2.8 0l.8-1.4a.4.4 0 0 1 .7.4l-.8 1.3A4.6 4.6 0 0 1 16.4 8z"/></symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.5 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.6-4.2zM14 5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="topo" id="topo">
+    <div class="container">
+      <a class="marca" href="#inicio"><img src="assets/img/icone-192.png" alt="" width="38" height="38">Lympha</a>
+      <button class="abrir-menu" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu">
+        <svg width="26" height="26"><use href="#i-menu"/></svg>
+      </button>
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="#para-quem">Para quem é</a>
+        <a href="#funcoes">O que faz</a>
+        <a href="#telas">Telas</a>
+        <a href="#planos">Livre e VIP</a>
+        <a class="botao botao-principal" href="#baixar">Baixar o app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- Abertura -->
+    <section class="abertura">
+      <div class="container">
+        <div>
+          <span class="selo-topo">Para quem convive com linfedema e lipedema</span>
+          <h1>Seu controle, <span class="destaque">mais leve.</span></h1>
+          <p class="resumo">
+            Medidas, peso, sintomas, sessões de drenagem, malhas, remédios e
+            consultas num lugar só — e a sua evolução pronta para mostrar à
+            equipe que cuida de você.
+          </p>
+          <div class="acoes">
+            <a class="botao botao-principal" href="#baixar">Baixar o app</a>
+            <a class="botao botao-secundario" href="#funcoes">Ver o que ele faz</a>
+          </div>
+          <p class="observacao">Grátis para começar. Android e iPhone.</p>
+        </div>
+        <div class="celular">
+          <img src="assets/img/prints/inicio.webp" alt="Tela de início do Lympha, com a pergunta do dia: como você está hoje?" width="1080" height="2400">
+        </div>
+      </div>
+    </section>
+
+    <!-- Para quem é -->
+    <section class="secao" id="para-quem">
+      <div class="container">
+        <div class="cabeca">
+          <span class="rotulo">Para quem é</span>
+          <h2>Tratamento é constância. O Lympha guarda cada passo.</h2>
+          <p>
+            Linfedema e lipedema se acompanham com medida e constância. Anotar
+            tudo no papel, no bloco de notas e na memória não dá conta — e é
+            justo isso que a equipe pergunta na consulta.
+          </p>
+        </div>
+        <div class="publico">
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-pessoa"/></svg></span>
+            <h3>Para você</h3>
+            <p>Registre em segundos como está o seu dia e veja, em gráficos, se o tratamento está fazendo diferença.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-equipe"/></svg></span>
+            <h3>Para a sua equipe</h3>
+            <p>Fisioterapeuta, angiologista, nutricionista: mande o relatório em PDF por e-mail, antes da consulta.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-escudo"/></svg></span>
+            <h3>Com cuidado</h3>
+            <p>Seus dados ficam protegidos e só são vistos por quem você escolher. O app não faz diagnóstico: você registra o que a equipe orientou.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funções -->
+    <section class="secao alternada" id="funcoes">
+      <div class="container">
+        <div class="cabeca">
+          <span class="rotulo">O que o Lympha faz</span>
+          <h2>Tudo do seu acompanhamento, num app só</h2>
+          <p>Cada função foi pensada com quem vive o tratamento todos os dias.</p>
+        </div>
+        <div class="grade">
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-regua"/></svg></span>
+            <h3>Medições <span class="etiqueta livre">LIVRE</span></h3>
+            <p>Perimetria ponto a ponto de braços e pernas, com o volume do membro e a comparação entre o lado direito e o esquerdo.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-balanca"/></svg></span>
+            <h3>Peso e altura <span class="etiqueta livre">LIVRE</span></h3>
+            <p>Pesagens com o IMC certo para a sua idade e a variação desde a última vez.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-coracao"/></svg></span>
+            <h3>Como você está hoje? <span class="etiqueta livre">LIVRE</span></h3>
+            <p>O diário de dor, peso e inchaço em poucos toques, com os sinais de cada diagnóstico e o aviso de possível erisipela.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-maos"/></svg></span>
+            <h3>Sessões de tratamento <span class="etiqueta vip">VIP</span></h3>
+            <p>Drenagem, massagem, enfaixamento, pressoterapia, laser, exercício: registre o que fez, quanto tempo e como se sentiu.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-meia"/></svg></span>
+            <h3>Minhas malhas <span class="etiqueta vip">VIP</span></h3>
+            <p>Cada malha com a compressão e a data da compra — e o aviso de medir de novo e de trocar, porque ela perde compressão com o uso.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-remedio"/></svg></span>
+            <h3>Meus medicamentos <span class="etiqueta livre">LIVRE</span></h3>
+            <p>O que você toma, como toma e quem receitou. A resposta pronta para "o que você está tomando?".</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-calendario"/></svg></span>
+            <h3>Minhas consultas <span class="etiqueta vip">VIP</span></h3>
+            <p>O calendário do que está marcado, com aviso no celular na véspera e no dia.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-prato"/></svg></span>
+            <h3>Planos da equipe <span class="etiqueta vip">VIP</span></h3>
+            <p>O plano alimentar e o programa de exercícios que a equipe passou, com a sequência da autodrenagem, sempre à mão.</p>
+          </div>
+          <div class="cartao">
+            <span class="icone"><svg><use href="#i-grafico"/></svg></span>
+            <h3>Evolução e relatórios <span class="etiqueta livre">LIVRE</span></h3>
+            <p>Gráficos de peso, medidas e sintomas. No VIP, o ano inteiro e os relatórios em PDF enviados por e-mail à sua equipe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Telas -->
+    <section class="secao" id="telas">
+      <div class="container">
+        <div class="cabeca">
+          <span class="rotulo">Por dentro do app</span>
+          <h2>Simples de usar, todos os dias</h2>
+          <p>Deslize para ver algumas telas.</p>
+        </div>
+      </div>
+      <div class="telas">
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/sintomas.webp" alt="Diário de sintomas" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Como você está<span>Dor, peso e inchaço, e os sinais de alerta.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/medicoes.webp" alt="Gráfico da medida da perna ao longo do ano" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Medições<span>A medida de cada ponto ao longo do tempo.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/evolucao.webp" alt="Gráfico de como a dor andou no mês" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Evolução<span>Como a dor andou, dia a dia.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/peso.webp" alt="Peso e IMC" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Peso e altura<span>A balança, o IMC e a variação.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/sessoes.webp" alt="Sessões de tratamento" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Sessões<span>A constância do tratamento, semana a semana.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/malhas.webp" alt="Minhas malhas" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Malhas<span>Quando medir de novo e quando trocar.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="celular pequeno"><img src="assets/img/prints/medicamentos.webp" alt="Meus medicamentos" loading="lazy" width="1080" height="2400"></div>
+          <figcaption>Medicamentos<span>O que toma, como e quem receitou.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Livre e VIP -->
+    <section class="secao alternada" id="planos">
+      <div class="container">
+        <div class="cabeca">
+          <span class="rotulo">Livre e VIP</span>
+          <h2>Comece de graça. Assine quando quiser mais.</h2>
+          <p>O essencial para o dia a dia é livre, para sempre. O Lympha VIP acrescenta o acompanhamento completo do tratamento e os relatórios para a equipe.</p>
+        </div>
+        <div class="planos">
+          <div class="plano">
+            <h3>Livre</h3>
+            <p class="sub">Para registrar e ver a sua evolução.</p>
+            <ul>
+              <li><svg><use href="#i-visto"/></svg><div><b>Medições</b><small>Perimetria, volume e comparação direita × esquerda</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Peso e altura</b><small>Com o IMC certo para a idade</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Como você está hoje?</b><small>Diário de sintomas e o alerta de erisipela</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Meu quadro</b><small>Diagnóstico, estágio e episódios de erisipela</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Meus medicamentos</b><small>O que toma, como e quem receitou</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Minha equipe</b><small>Quem acompanha você, com o contato</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Lembretes</b><small>Malha, autodrenagem, pele, exercício — na sua hora</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Evolução da semana e do mês</b><small>Gráficos de peso, medidas e sintomas</small></div></li>
+            </ul>
+          </div>
+          <div class="plano vip">
+            <h3><span class="destaque">Lympha VIP</span></h3>
+            <p class="sub">Para acompanhar o tratamento inteiro, com a equipe.</p>
+            <p class="mais">Tudo do Livre, e mais:</p>
+            <ul>
+              <li><svg><use href="#i-visto"/></svg><div><b>Sessões de tratamento</b><small>Drenagem, compressão, exercício e mais, sessão por sessão</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Minhas malhas</b><small>O aviso de medir de novo e de trocar</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Minhas consultas</b><small>Calendário com aviso no celular</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Programa de exercícios</b><small>E a sequência da autodrenagem</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Plano alimentar</b><small>A dieta da equipe, refeição por refeição</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Sua evolução de mais longe</b><small>O último ano, ou o período que você escolher</small></div></li>
+              <li><svg><use href="#i-visto"/></svg><div><b>Relatórios em PDF por e-mail</b><small>Para a sua equipe — e enviados sozinhos antes da consulta</small></div></li>
+            </ul>
+          </div>
+        </div>
+        <p class="observacao" style="text-align:center">A assinatura VIP é mensal ou anual, feita pela Google Play ou pela App Store, e pode ser cancelada quando quiser.</p>
+      </div>
+    </section>
+
+    <!-- Baixar -->
+    <section class="secao" id="baixar">
+      <div class="container">
+        <div class="baixar">
+          <div>
+            <h2>Baixe o Lympha</h2>
+            <p>Aponte a câmera do celular para o QR code do seu aparelho — ou toque nele, se já estiver no celular.</p>
+            <p><small>O app está chegando às lojas. Enquanto isso, o QR leva ao aviso de quando ficará disponível.</small></p>
+          </div>
+          <div class="qrs">
+            <a class="qr" href="android/">
+              <img src="assets/img/qr-android.svg" alt="QR code para baixar o Lympha no Android" width="158" height="158">
+              <strong><svg><use href="#i-android"/></svg>Android</strong>
+              <small>Google Play</small>
+            </a>
+            <a class="qr" href="ios/">
+              <img src="assets/img/qr-ios.svg" alt="QR code para baixar o Lympha no iPhone" width="158" height="158">
+              <strong><svg><use href="#i-apple"/></svg>iPhone</strong>
+              <small>App Store</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" style="padding-top:0">
+      <div class="container">
+        <div class="aviso">
+          <svg><use href="#i-info"/></svg>
+          <div>O Lympha é um apoio para o seu acompanhamento: ele organiza o que você registra e o que a sua equipe orientou. <b>Não faz diagnóstico e não substitui a consulta</b> com profissionais de saúde. Em caso de febre, vermelhidão e calor no membro, procure atendimento.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div>
+        <a class="marca" href="#inicio"><img src="assets/img/icone-192.png" alt="" width="38" height="38">Lympha</a>
+        <p style="margin-top:12px">Seu controle, mais leve.</p>
+      </div>
+      <div>
+        <h4>O app</h4>
+        <a href="#funcoes">O que faz</a>
+        <a href="#planos">Livre e VIP</a>
+        <a href="#baixar">Baixar</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="mailto:contato@lympha.com.br">contato@lympha.com.br</a>
+      </div>
+      <div class="fim">© <span id="ano">2026</span> Lympha. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
