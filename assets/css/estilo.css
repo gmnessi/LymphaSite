@@ -465,3 +465,16 @@ p { margin: 0 0 1em; }
   html { scroll-behavior: auto; }
   .botao { transition: none; }
 }
+
+/* Páginas de texto: privacidade, termos, exclusão de conta. */
+.documento { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+.documento .voltar { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--texto); text-decoration: none; margin-bottom: 32px; }
+.documento .voltar img { width: 34px; height: 34px; }
+.documento h1 { font-size: 2rem; margin-bottom: 6px; }
+.documento .atualizado { color: var(--texto-suave); margin-bottom: 32px; }
+.documento h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+.documento p, .documento li { color: var(--texto); line-height: 1.7; }
+.documento ul, .documento ol { padding-left: 22px; margin: 8px 0 16px; }
+.documento li { margin-bottom: 6px; }
+.documento .destaque { background: var(--marca-suave); border: 1px solid var(--borda); border-radius: var(--raio); padding: 18px 22px; margin: 20px 0; }
+.documento a { color: var(--indigo); }
