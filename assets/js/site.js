@@ -1,5 +1,5 @@
 // O pouco de comportamento do site: o menu do celular, a borda do topo ao
-// rolar e o ano do rodapé. Sem bibliotecas.
+// rolar, as setas das telas e o ano do rodapé. Sem bibliotecas.
 
 (function () {
   var topo = document.getElementById('topo');
@@ -25,6 +25,31 @@
   }
   window.addEventListener('scroll', marcarRolagem, { passive: true });
   marcarRolagem();
+
+  // As setas das telas andam uma tela por vez e somem quando chegam ao fim.
+  var telas = document.querySelector('.telas');
+  var anterior = document.querySelector('.seta-anterior');
+  var proxima = document.querySelector('.seta-proxima');
+  if (telas && anterior && proxima) {
+    function passo() {
+      var figura = telas.querySelector('figure');
+      return figura ? figura.getBoundingClientRect().width + 28 : 280;
+    }
+    function marcarSetas() {
+      var fim = telas.scrollWidth - telas.clientWidth - 4;
+      anterior.disabled = telas.scrollLeft <= 4;
+      proxima.disabled = telas.scrollLeft >= fim;
+    }
+    anterior.addEventListener('click', function () {
+      telas.scrollBy({ left: -passo(), behavior: 'smooth' });
+    });
+    proxima.addEventListener('click', function () {
+      telas.scrollBy({ left: passo(), behavior: 'smooth' });
+    });
+    telas.addEventListener('scroll', marcarSetas, { passive: true });
+    window.addEventListener('resize', marcarSetas);
+    marcarSetas();
+  }
 
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();

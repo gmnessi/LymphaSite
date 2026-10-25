@@ -313,7 +313,34 @@ p { margin: 0 0 1em; }
   padding: 10px max(20px, calc((100vw - var(--largura)) / 2 + 20px)) 30px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  /* Sem a barra de rolagem: no computador quem passa as telas são as setas,
+     e no celular, o dedo. */
+  scrollbar-width: none;
 }
+.telas::-webkit-scrollbar { display: none; }
+.carrossel { position: relative; }
+.seta {
+  position: absolute;
+  top: calc(50% - 40px);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--indigo);
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: opacity .2s, transform .15s;
+}
+.seta:hover { transform: scale(1.06); }
+.seta:disabled { opacity: 0; pointer-events: none; }
+.seta svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.seta-anterior { left: max(12px, calc((100vw - var(--largura)) / 2 - 26px)); }
+.seta-proxima { right: max(12px, calc((100vw - var(--largura)) / 2 - 26px)); }
+@media (max-width: 600px) { .seta { width: 42px; height: 42px; } }
 .telas figure { margin: 0; flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
 .telas figcaption { margin-top: 14px; font-weight: 800; }
 .telas figcaption span { display: block; font-weight: 600; color: var(--texto-suave); font-size: .9rem; max-width: 220px; margin: 2px auto 0; }
